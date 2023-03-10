@@ -1,38 +1,53 @@
-.App {
-  text-align: center;
+@import url('https://rsms.me/inter/inter.css');
+
+:root{
+  --border: 1px solid #e4e7eb;
+  --buttonBg: linear-gradient(98.63deg, #9b005d 0%, #9b005dd3 100%);
+  /* --buttonBg: #9b005d; */
+  --second:#dc0084;
+  /* --box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); */
+  --box-shadow: rgba(60, 64, 67, 0.121) 0px 1px 2px 0px, 
+  rgba(60, 64, 67, 0.064) 0px 1px 3px 1px;;
+  
+
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.app-container {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #f5f7fa;
 }
 
-.App-link {
-  color: #61dafb;
+* {
+  box-sizing: border-box;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app-container {
+  min-height: 100vh;
+}
+
+.light-theme {
+  background-color: #f5f7fa;
+}
+
+.dark-theme {
+  background-color: #000000;
+}
+.logout-btn:hover{
+  background:var(--second);
+ 
+}
+
+.botn:hover{
+  background:var(--second);
+
 }

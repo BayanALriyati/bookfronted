@@ -1,0 +1,234 @@
+.favorites-container {
+    display: flex;
+    justify-content: center;
+    min-height: 75vh;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .favorites-container {
+      min-height: 90vh;
+    }
+  }
+  
+  .favorites-content-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 1110px;
+    margin-top: 3rem;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .favorites-content-container {
+      width: 80%;
+      max-width: 1110px;
+    }
+  }
+  
+  .favorites-heading {
+    color: #3e4c59;
+    font-family: 'Inter';
+    font-size: 24px;
+    font-weight: 700;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .favorites-heading {
+      font-size: 36px;
+    }
+  }
+  
+  .remove-all-btn {
+    display: flex;
+    align-self: flex-end;
+    color: var(--second);
+    background: transparent;
+    font-family: 'Inter';
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding-bottom: 1rem;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .remove-all-btn {
+      font-size: 16px;
+    }
+  }
+  
+  /* Dark Theme */
+  .favorites-dark-heading-text {
+    color: #ffffff;
+  }
+  .favorites-dark-description-text {
+    color: #d3d3d3;
+  }
+
+/*============================================================================*/
+  .favorites-list {
+    padding-left: 0px;
+  }
+
+
+  .favorite-item {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 16px 0px #eaebed;
+  margin-bottom: 32px;
+}
+
+@media screen and (min-width: 768px) {
+  .favorite-item {
+    margin-bottom: 32px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .favorite-item {
+    padding-left: 36px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-right: 48px;
+  }
+}
+
+.favorite-product-image {
+  width: 96px;
+  height: 116px;
+  border-radius: 4px;
+}
+
+.favorite-item-details-container {
+  margin-left: 16px;
+  flex-grow: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .favorite-item-details-container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .favorite-product-title-brand-container {
+    width: 250px;
+  }
+}
+
+.favorite-product-title {
+  color: #171f46;
+  font-family: 'Inter';
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .favorite-product-title {
+    font-size: 16px;
+  }
+}
+
+.favorite-product-brand {
+  color: #64748b;
+  font-family: 'Inter';
+  font-size: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .favorite-product-brand {
+    font-size: 12px;
+  }
+}
+
+.total-price-remove-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.favorite-book-status-text {
+  color: #334155;
+  font-family: 'Inter';
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 0;
+  min-width: 100px;
+}
+@media screen and (min-width: 768px) {
+  .favorite-book-status-text {
+    font-size: 16px;
+  }
+}
+.favorite-book-status {
+  color:var(--second);
+  font-family: 'Inter';
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 0;
+  min-width: 100px;
+}
+
+@media screen and (min-width: 768px) {
+  .favorite-book-status {
+    font-size: 16px;
+  }
+}
+
+.remove-button {
+  background-color: transparent;
+  color: #334155;
+  font-family: 'Inter';
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .remove-button {
+    display: none;
+  }
+}
+
+.delete-button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-left: 32px;
+}
+
+@media screen and (max-width: 767px) {
+  .delete-button {
+    display: none;
+  }
+}
+.favorite-book-item-nav-link {
+  text-decoration: none;
+}
+
+/* Dark Theme */
+
+.favorite-item-dark-heading {
+  color: #ffffff;
+}
+.favorite-item-dark-description {
+  color: #d3d3d3;
+}
+.favorite-item-dark-theme-bg {
+  background-color: #272727;
+  box-shadow: 0px 4px 16px 0px #505050;
+}

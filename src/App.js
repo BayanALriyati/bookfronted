@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import './App.css'
+// import Footer from './components/Footer/Footer'
+import Header from './components/Header/Header'
+import ProfilePicture from './components/ProfilePicture/ProfilePicture'
+import BookShelves from './pages/BookShelves/BookShelves'
+import Favorites from './pages/Favorites/Favorites'
+import Home from './pages/Home/Home'
+import Login from './pages/Login/Login'
+import MyProfile from './pages/MyProfile/MyProfile'
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <>
 
-export default App;
+  <div className="app-container light-theme">
+    <Header/>
+    {/* <BookShelves/> */}
+    <Favorites/>
+    {/* <Home/> */}
+    {/* <Login/> */}
+    {/* <MyProfile/> */}
+
+  </div>
+
+    
+    </>
+  )
+}
