@@ -33,7 +33,7 @@ export default function App() {
     {/* <SingleBook/>  */}
    
     <Route path='/add' element={<AddBook/>}></Route>
-    <Route path='/update' element={<UpdateBook/>}></Route>
+    <Route path='/update/:id' element={<UpdateBook/>}></Route>
   
     </Routes>
     

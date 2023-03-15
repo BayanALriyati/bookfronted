@@ -104,7 +104,7 @@ export default function RightSide() {
                   <span className="book-item-status"> {b.description}</span>
                 </p>
                 <div className="editBook">
-                 <Link to='/update'> <UilEdit  style={{color: 'black'}}/></Link>
+                 <Link to={`/update/${b.id}`}> <UilEdit  style={{color: 'black'}}/></Link>
                   <UilTrashAlt/>
                 </div>
               </div>
@@ -136,7 +136,7 @@ export default function RightSide() {
                   <span className="book-item-status"> {b.description}</span>
                 </p>
                 <div className="editBook">
-                <Link to='/update'> <UilEdit  style={{color: 'black'}}/></Link>
+                <Link to={`/update/${b.id}`}> <UilEdit  style={{color: 'black'}}/></Link>
                   <UilTrashAlt/>
                 </div>
               </div>

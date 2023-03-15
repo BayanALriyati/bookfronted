@@ -28,7 +28,7 @@
     
     
 
-    if($post->updateBook()){
+    if($book->updateBook()){
         echo json_encode("post update.");
 
     } else{

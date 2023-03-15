@@ -29,6 +29,12 @@
             $stmt->execute();
             return $stmt;
         }
+        public function getSingleBook(){
+            $sqlQuery = "SELECT * FROM " . $this->dbTable ." WHERE " . $this->id;
+            $stmt = $this->conn->prepare($sqlQuery);
+            $stmt->execute();
+            return $stmt;
+        }
 
         //CREATE User
         public function createBook(){

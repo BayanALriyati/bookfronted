@@ -1,11 +1,14 @@
 import axios from 'axios';
-import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect, useState } from 'react'
+import { useNavigate, useParams } from 'react-router-dom';
 import Footer from '../Footer/Footer'
 import LeftSide from '../LeftSide/LeftSide';
 import './UpdateBook.css'
 
 export default function UpdateBook() {
+  // توخد id الرابط
+  const param = useParams()
+  console.log(param)
   const navigate = useNavigate();
   const [book , setBook] = useState({
     title:'',
@@ -14,7 +17,12 @@ export default function UpdateBook() {
     image: '',
 
   });
-  
+  useEffect(()=>{
+    axios.get(`http://localhost/bookfronted/bfront/backend/books/get.php?id=${param.id}`).then(res =>{
+      console.log(res)
+      setBook(res.data)
+    })
+  },[])
  const handlChange =(e)=>{
     // console.log(e.target.value);
     const newBook = {...book}
@@ -37,21 +45,22 @@ const handleSubmit=(e)=>{
   formData.append('author' , book.author  )
   formData.append('description' , book.description)
   formData.append('image' , book.image )
+  formData.append('id' , param.id )
   console.log(formData.get('title'));
   console.log(formData.get('author'));
   console.log(formData.get('description'));
   console.log(formData.get('image'));
-  axios.post('http://localhost/bookfronted/bfront/backend/books/create.php',formData)
+  axios.post('http://localhost/bookfronted/bfront/backend/books/update.php',formData)
   .then(res=> {
     console.log(res);
-    setBook({
-      title:'',
-      author:'',
-      description : '',
-      image: '',
-    })
+    // setBook({
+    //   title:'',
+    //   author:'',
+    //   description : '',
+    //   image: '',
+    // })
     
-    navigate('/book');
+    // navigate('/book');
   })
 }
 
