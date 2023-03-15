@@ -1,0 +1,10 @@
+.editBook{
+    /* text-align: end; */
+    /* margin-right: 4rem; */
+    color: black;
+}
+
+Link .editBook{
+    color: black !important;
+}
+

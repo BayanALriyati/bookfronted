@@ -1,5 +1,7 @@
 import React from 'react'
 import './LeftSide.css'
+import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export default function LeftSide() {
   return (
@@ -43,7 +45,10 @@ export default function LeftSide() {
         </button>
       </div>
     </div>
-    <h1 className="bookshelves-text ">Bookshelves</h1>
+    <div className="headshelv">
+      <h1 className="bookshelves-text ">Bookshelves</h1>
+    </div>
+    
     <ul className="shelf-items-container">
       <li className="shelf-item">
         <button type="button" className="shelf-button active-shelf ">
@@ -65,6 +70,10 @@ export default function LeftSide() {
           Want to Read
         </button>
       </li>
+      <Link to='/add'><button className="find-books-desktop-btn botn" type="button">
+          <b style={{fontSize:'15px'}}><b style={{fontSize:'20px',padding:'6px'}}>+</b> Add New Book</b>
+        </button>
+        </Link>
     </ul>
   </div>
     

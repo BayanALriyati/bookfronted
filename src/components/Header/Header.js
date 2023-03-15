@@ -1,102 +1,109 @@
-import React from 'react'
-import './Header.css'
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Header.css";
 
 export default function Header() {
   return (
     <>
-    
-    <nav className="nav-header">
-      <div className="nav-content">
-        <div className="nav-bar-mobile-logo-container">
-          <a href="/">
-            <img
-              className="website-logo"
-              src="https://res.cloudinary.com/gottumukkala/image/upload/v1670324059/Book%20Hub%20Mini%20Project/Group_7731logo_fegx8c.png"
-              alt="website logo"
-            />
-          </a>
-          <button type="button" className="nav-mobile-btn">
-            <svg
-              stroke="currentColor"
-              fill="currentColor"
-              strokeWidth={0}
-              viewBox="0 0 512 512"
-              color="#000000"
-              height={25}
-              width={25}
-              xmlns="http://www.w3.org/2000/svg"
-              style={{ color: "rgb(0, 0, 0)" }}
-            >
-              <path d="M32 96v64h448V96H32zm0 128v64h448v-64H32zm0 128v64h448v-64H32z" />
-            </svg>
-          </button>
-        </div>
-        <div className="nav-bar-large-container">
-          <a href="/">
-            <img
-              className="website-logo"
-              src="https://res.cloudinary.com/gottumukkala/image/upload/v1670324059/Book%20Hub%20Mini%20Project/Group_7731logo_fegx8c.png"
-              alt="website logo"
-            />
-          </a>
-          <ul className="nav-menu">
-            <li className="nav-menu-item">
-              <a className="nav-link " href="/">
-                Home
-              </a>
+      <nav className="nav-header">
+        <div className="nav-content">
+          <div className="nav-bar-mobile-logo-container">
+            <li href="/">
+              <img
+                className="website-logo"
+                src="https://res.cloudinary.com/gottumukkala/image/upload/v1670324059/Book%20Hub%20Mini%20Project/Group_7731logo_fegx8c.png"
+                alt="website logo"
+              />
             </li>
-            <li className="nav-menu-item">
-              <a aria-current="page" className="nav-link  active" href="/shelf">
-                Bookshelves
-              </a>
-            </li>
-            <li className="nav-menu-item">
-              <a className="nav-link " href="/favorites">
-                Favorites
-              </a>
-            </li>
-            {/* =======profile========= */}
-            {/* <!-- Avatar --> */}
-            <li className="nav-item dropdown navbar-nav ms-2">
-  <a
-    className="nav-link dropdown-toggle d-flex align-items-center"
-    href="#"
-    id="navbarDropdownMenuLink"
-    role="button"
-    data-mdb-toggle="dropdown"
-    aria-expanded="false"
-  >
-    <img
-      src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img (31).webp"
-      className="rounded-circle"
-      height={30}
-      alt="Portrait of a Woman"
-      loading="lazy"
-    />
-  </a>
-  <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-    <li>
-      <a className="dropdown-item" href="#">
-        My profile
-      </a>
-    </li>
-    <li>
-      <a className="dropdown-item" href="#">
-        Logout
-      </a>
-    </li>
-  </ul>
-</li>
+            <button type="button" className="nav-mobile-btn">
+              <svg
+                stroke="currentColor"
+                fill="currentColor"
+                strokeWidth={0}
+                viewBox="0 0 512 512"
+                color="#000000"
+                height={25}
+                width={25}
+                xmlns="http://www.w3.org/2000/svg"
+                style={{ color: "rgb(0, 0, 0)" }}
+              >
+                <path d="M32 96v64h448V96H32zm0 128v64h448v-64H32zm0 128v64h448v-64H32z" />
+              </svg>
+            </button>
+          </div>
+          <div className="nav-bar-large-container">
+            <a href="/">
+              <img
+                className="website-logo"
+                src="https://res.cloudinary.com/gottumukkala/image/upload/v1670324059/Book%20Hub%20Mini%20Project/Group_7731logo_fegx8c.png"
+                alt="website logo"
+              />
+            </a>
+            <ul className="nav-menu">
+              <li className="nav-menu-item">
+                <Link to="/" className="nav-link " href="/">
+                  Home
+                </Link>
+              </li>
+              <li className="nav-menu-item">
+                <Link
+                  to="/book"
+                  aria-current="page"
+                  className="nav-link  active"
+                  href="/shelf"
+                >
+                  Bookshelves
+                </Link>
+              </li>
+              <li className="nav-menu-item">
+                <a className="nav-link " href="/favorites">
+                  Favorites
+                </a>
+              </li>
+              {/* =======profile========= */}
+              {/* <!-- Avatar --> */}
+              <li className="nav-item dropdown navbar-nav ms-2">
+                <a
+                  className="nav-link dropdown-toggle d-flex align-items-center"
+                  href="#"
+                  id="navbarDropdownMenuLink"
+                  role="button"
+                  data-mdb-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img (31).webp"
+                    className="rounded-circle"
+                    height={30}
+                    alt="Portrait of a Woman"
+                    loading="lazy"
+                  />
+                </a>
+                <ul
+                  className="dropdown-menu"
+                  aria-labelledby="navbarDropdownMenuLink"
+                >
+                  <li>
+                    <Link to="/MyProfile" className="dropdown-item" href="#">
+                      My profile
+                    </Link>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                      Logout
+                    </a>
+                  </li>
+                </ul>
+              </li>
 
-         
-            {/* ------------------- */}
-          </ul>
-          {/* <button type="button" className="logout-btn">
+              {/* ------------------- */}
+            </ul>
+            {/* <button type="button" className="logout-btn">
             Logout
           </button> */}
 
-          {/* moon button */}
-          {/* <button type="button" className="theme-button">
+            {/* moon button */}
+            {/* <button type="button" className="theme-button">
             <svg
               stroke="currentColor"
               fill="currentColor"
@@ -111,14 +118,9 @@ export default function Header() {
               <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
             </svg>
           </button> */}
+          </div>
         </div>
-      </div>
-    </nav>
-
-    
-    
+      </nav>
     </>
-    
-    
-  )
+  );
 }
